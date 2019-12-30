@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration monitorInterval="3">
+
+    <!--make  two appenders -->
+    <appenders>
+
+        <File name="ALL" fileName="E:\JavaProjects\Task03_xmlparsing\log\all.txt">
+            <PatternLayout pattern="%d{ISO8601} [%-5p] (%F:%L) - %m%n"/>
+        </File>
+
+        <File name="WORK" fileName="E:\JavaProjects\Task03_xmlparsing\log\work.txt">
+            <PatternLayout pattern="%d{ISO8601} [%-5p] (%F:%L) - %m%n"/>
+        </File>
+
+    </appenders>
+
+    <loggers>
+
+        <logger name="by.trjava.xmlparsing.chekun.controller.Main" level="INFO">
+            <appender-ref ref="WORK"/>
+        </logger>
+
+        <logger name="by.trjava.xmlparsing.chekun.controller.MainServlet" level="INFO">
+            <appender-ref ref="WORK"/>
+        </logger>
+
+        <root level="DEBUG">
+            <appender-ref ref="ALL"/>
+        </root>
+
+    </loggers>
+
+</configuration>

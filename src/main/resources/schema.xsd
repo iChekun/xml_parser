@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="https://www.example.com"
+        xmlns:ex="https://www.example.com">
+
+
+    <element name="tourists-vouchers">
+        <complexType>
+            <sequence>
+                <element name="tourist-voucher"
+                         type="ex:Tourist-voucher"
+                         minOccurs="2"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+
+    <complexType name="Tourist-voucher">
+
+        <sequence>
+
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="The day off"/>
+                        <enumeration value="Excursion"/>
+                        <enumeration value="Rest"/>
+                        <enumeration value="Pilgrimage"/>
+                        <enumeration value="Cruise"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="country">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="Belarus"/>
+                        <enumeration value="Russia"/>
+                        <enumeration value="USA"/>
+                        <enumeration value="Spain"/>
+                        <enumeration value="Norway"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="number-days">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="2"/>
+                        <maxExclusive value="181"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="transport">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="Car"/>
+                        <enumeration value="Plane"/>
+                        <enumeration value="Train"/>
+                        <enumeration value="Ship"/>
+                        <enumeration value="Bus"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+
+            <element name="hotel-characteristic" type="ex:Hotel-characteristics"/>
+
+            <element name="trip-price" type="ex:Trip-prices"/>
+
+            <element name="departure-date" type="date"/>
+
+        </sequence>
+
+        <attribute name="id" use="required" type="ID"/>
+        <!-- required mean that id must be-->
+
+    </complexType>
+
+
+    <complexType name="Prices">
+        <sequence>
+            <element name="transport-price">
+                <simpleType>
+                    <restriction base="double">
+                        <minExclusive value="0"/>
+                        <maxExclusive value="9999999"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="hotel-price">
+                <simpleType>
+                    <restriction base="double">
+                        <minExclusive value="0"/>
+                        <maxExclusive value="999999"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+        </sequence>
+    </complexType>
+
+
+    <complexType name="Trip-prices">
+        <complexContent>
+            <extension base="ex:Prices">
+                <sequence>
+
+                    <element name="full-price">
+                        <simpleType>
+                            <restriction base="double">
+                                <minExclusive value="0"/>
+                                <maxExclusive value="9999999"/>
+                            </restriction>
+                        </simpleType>
+                    </element>
+
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <complexType name="Hotel-characteristics">
+        <sequence>
+
+            <element name="hotel-level">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"/>
+                        <maxExclusive value="6"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="food-type">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="BB"/>
+                        <enumeration value="НВ"/>
+                        <enumeration value="FB"/>
+                        <enumeration value="AI"/>
+                        <enumeration value="UAI"/>
+                        <enumeration value="NA"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+
+            <element name="rooms-count">
+                <simpleType>
+                    <restriction base="nonNegativeInteger">
+                        <minExclusive value="0"/>
+                        <maxExclusive value="21"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+
+            <element name="is-TV-available" type="boolean" default="false"/>
+
+            <element name="is-air-condition-available" type="boolean" default="false"/>
+
+
+        </sequence>
+    </complexType>
+
+</schema>

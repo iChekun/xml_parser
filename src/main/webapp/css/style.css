@@ -1,0 +1,72 @@
+div {
+
+    text-align: center;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bolder;
+    color: #000000;
+}
+
+.left-column {
+    width: 45%;
+    min-height: 50px;
+    float: left;
+}
+
+
+.right-column {
+    width: 45%;
+    min-height: 50px;
+    float: right;
+}
+
+
+.footer {
+    clear: both;
+}
+
+.error {
+    width: 1920px;
+    height: 980px;
+    background-image: url(../pictures/error_background.jpg);
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+
+
+.base {
+    margin: 0; /*отступ*/
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../pictures/default_background.jpg);
+    background-attachment: fixed; /* Фиксируем фон веб-страницы */
+}
+
+
+.table-background {
+    margin: 0; /*отступ*/
+
+    width: 1920px;
+    height: 1080px;
+
+    background-image: url(../pictures/table_background_blue_light.jpg);
+    background-attachment: fixed; /* Фиксируем фон веб-страницы */
+}
+
+
+.page-heading {
+    display: inline-block;
+    font-size: 31px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    padding: 0 50px;
+    position: relative;
+    line-height: 1.1;
+    color: #612021;
+    text-decoration: underline black;
+}
+

@@ -1,0 +1,50 @@
+<tc:tourists-vouchers xmlns:tc="https://www.example.com">
+
+
+    <tourist-voucher id="ID-1">
+        <type>Rest</type>
+        <country>Belarus</country>
+        <number-days>25</number-days>
+        <transport>Car</transport>
+
+        <hotel-characteristic>
+            <hotel-level>3</hotel-level>
+            <food-type>BB</food-type>
+            <rooms-count>3</rooms-count>
+            <is-TV-available>true</is-TV-available>
+            <is-air-condition-available>false</is-air-condition-available>
+        </hotel-characteristic>
+
+        <trip-price>
+            <transport-price>1500</transport-price>
+            <hotel-price>2000</hotel-price>
+            <full-price>10000</full-price>
+        </trip-price>
+
+        <departure-date>2019-02-10</departure-date>
+    </tourist-voucher>
+
+
+    <tourist-voucher id="ID-2">
+        <type>Excursion</type>
+        <country>Russia</country>
+        <number-days>31</number-days>
+        <transport>Bus</transport>
+
+        <hotel-characteristic>
+            <hotel-level>2</hotel-level>
+            <food-type>FB</food-type>
+            <rooms-count>2</rooms-count>
+            <is-TV-available>false</is-TV-available>
+            <is-air-condition-available>false</is-air-condition-available>
+        </hotel-characteristic>
+
+        <trip-price>
+            <transport-price>500</transport-price>
+            <hotel-price>1300</hotel-price>
+            <full-price>7500</full-price>
+        </trip-price>
+
+    </tourist-voucher>
+
+</tc:tourists-vouchers>

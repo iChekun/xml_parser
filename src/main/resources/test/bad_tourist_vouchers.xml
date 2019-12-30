@@ -1,0 +1,29 @@
+
+<!-- using for Tests-->
+<tc:tourists-vouchers xmlns:tc="https://www.example.com">
+
+
+    <tourist-voucher id=>
+        <type>Excursion</type>
+        <country>USA</country>
+        <number-days>5</number-days>
+        <transport>Plane</transport>
+
+        <hotel-characteristic>
+            <hotel-level>4</hotel-level>
+            <food-type>AI</food-type>
+            <rooms-count>2</rooms-count>
+            <is-TV-available>true</is-TV-available>
+            <is-air-condition-available>true</is-air-condition-available>
+        </hotel-characteristic>
+
+        <trip-price>
+            <hotel-price>12000</hotel-price>
+            <transport-price>25000</transport-price>
+            <full-price>55000</full-price>
+        </trip-price>
+
+    </tourist-voucher>
+
+
+</tc:tourists-vouchers>
